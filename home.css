@@ -1,0 +1,219 @@
+.typewriter {
+    font-family: 'Karma', serif;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid #F05941;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(24, end) infinite,
+        blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 30%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #F05941
+    }
+}
+
+
+#skills{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+    /* background-color: #efeded57; */
+    border-radius: 10px;
+    min-width: 400px;
+    /* align-items: center; */
+    justify-content: center;
+    height: 285px;
+    /* opacity: 0.39; */
+}
+
+.skill-item{
+    height: 37px;
+    margin: 20px;
+    text-align: center;
+    padding-top: 18px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #2ed19b98;
+    border: solid 2px;
+    border-color: #2ed19b;
+}
+
+#clear{
+    background-color: #05151044;
+    height: 20px;
+    padding: 5px;
+    /* border-radius: 10px; */
+    width: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 0 10px 0 0;
+}
+
+.skill-item:hover{
+    /* background-color:#2ed19b4e ; */
+    cursor: pointer;
+}
+
+
+#skill-card{
+    position: absolute;
+    top: 20px;
+    width: 40%;
+    right: -500px;
+    background-color: #58605d20;
+    border-radius: 10px;
+    /* border: solid 2px; */
+}
+
+#skill-card ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#skill-card li{
+    width: 80%;
+    margin: 4px;
+}
+
+.visible-0{
+    visibility: hidden;
+}
+
+.margin-0{
+    margin: 0%;
+}
+
+.fnt-12{
+    font-size: 0.75em;;
+}
+
+.fnt-14{
+    font-size: 0.875em;;
+}
+
+.timeline {
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #F05941;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 37.2%;
+
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 10px 10px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    -webkit-box-shadow: -1px -1px 14px 5px rgba(9, 38, 53, 0.22);
+    -moz-box-shadow: -1px -1px 14px 5px rgba(9, 38, 53, 0.22);
+    box-shadow: -1px -1px 14px 5px rgba(9, 38, 53, 0.22);
+}
+
+.about-me-content {
+    width: 70%;
+    margin: 20px auto;
+}

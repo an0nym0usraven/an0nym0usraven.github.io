@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+h2 {
+    font-size: 2.8em;
+    margin: 2px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 2px;
+}
+
+p, h6 {
+    margin: 0;
+}
+
+#left-panel {
+    flex: 0 0 30vw;
+    flex-direction: column;
+    width: 30vw;
+    min-width: 200px;
+    max-width: 400px;
+    
+}
+
+#right-panel {
+    flex: 1;
+    width: 70vw;
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    color: #092635;
+    /* background-color: #1B4242; */
+}
+
+#menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 40vh;
+    margin-top: 40px;
+}
+
+#profile-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons>a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s, opacity 0.3s;
+}
+
+.social-icons img:hover {
+    filter: saturate(200%);
+    transform: scale(1.2) rotate(360deg);
+}
+
+#menu>a {
+    margin-top: 14px;
+}
+
+#menu a:hover {
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#heading {
+    margin-top: 40px;
+}
+
+#content {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#heading>h3 {
+    font-size: 2.1em;
+    color: #F05941;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+h4 {
+    margin: 0;
+}
+
+h5 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+
+#illustration{
+    margin-top: 50px;
+    position: absolute;
+    bottom: 15%;
+    left: 47%;
+    opacity: 0.1;
+    scale: 1;
+    z-index: -1;
+}
+
+
+.bg-black {
+    background-color: #001011;
+}
+
+.color-black {
+    color: #092635;
+}
+
+.color-white {
+    color: #F5F7F8;
+}
+
+.color-orange {
+    color: #F05941;
+}
+
+.fnt-karma {
+    font-family: 'Karma', serif;
+}
+
+.fnt-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+

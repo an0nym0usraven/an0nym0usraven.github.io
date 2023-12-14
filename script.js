@@ -144,7 +144,7 @@ $(document).ready(function () {
             $("#heading").append("<h2>Skilled in...</h2>");
             $("#heading > h2").addClass("fnt-karma color-orange typewriter");
             $("#content").append(`
-            <div id="skills" class="color-black">
+            <div id="skills" class="color-black fnt-mob">
                 <div id="languages" class="skill-item">
                     Languages
                 </div>
@@ -331,7 +331,7 @@ $(document).ready(function () {
             $("#content").append(
                 `
                 <p>Here are some of the projects I have worked on during my academic journey.<p/>
-                <div class="row">
+                <div class="row fnt-mob">
                 <div class="card">
                     <a
                         href="https://github.com/an0nym0usraven/Secure-Transaction-on-Ecommerce-website-using-behavioural-techniques">
@@ -366,7 +366,7 @@ $(document).ready(function () {
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row fnt-mob">
                 <div class="card">
                     <a href="https://github.com/an0nym0usraven/iRevolution">
                         <img src="images/projects/irevolution.png" alt="snapshot from project 3">
@@ -399,7 +399,7 @@ $(document).ready(function () {
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row fnt-mob">
                 <div class="card">
                     <a
                         >
@@ -549,5 +549,12 @@ $(document).ready(function () {
             $("#content").append("<p>You can reach me at <a href='mailto:aakanksha.priya2020@vitbhopal.ac.in'>email</a>.</p><p>You can reach me on <a href='https://t.me/sparkling_cyanidee' target='_blank'>telegram</a>.</p>");
         }
     })
+
+
+    // if ($(window).width() <= 600){
+
+        
+            
+    // }
 });
 

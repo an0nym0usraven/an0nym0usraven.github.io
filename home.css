@@ -217,3 +217,77 @@
     width: 70%;
     margin: 20px auto;
 }
+
+@media screen and (max-width: 600px) {
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    
+        to {
+            width: 100%
+        }
+    }
+
+    #skills{
+        width: 80%;
+        min-width: none;
+        max-width: 600px;
+        height: 40vh;
+        /* background-color: #2ed19b; */
+    }
+
+    .skill-item{
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .fnt-mob{
+        font-size: 0.785em;
+    }
+
+    #skill-card{
+        width: 30%;
+    }
+
+
+
+    .timeline{
+        width: 100%;
+    }
+
+    .timeline::after{
+        left: 50%;
+    }
+
+    .container::after{
+        right: 16px;
+    }
+
+    .left::before{
+        right: 12px;
+        top: 22px;
+    }
+
+    .right::before{
+        left: 10px;
+        /* background-color: #2ed19b; */
+    }
+    .container{
+        padding: 20px;
+    }
+    .container::after{
+        right: -23px;
+    }
+
+    .row{
+        /* height: 300px; */
+        margin-top: 2px;
+        /* height: 100px; */
+        background-color: #F05941;
+    }
+
+    .card{
+        height: 200px;
+    }
+}

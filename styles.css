@@ -16,7 +16,8 @@ h3 {
     margin: 2px;
 }
 
-p, h6 {
+p,
+h6 {
     margin: 0;
 }
 
@@ -26,7 +27,7 @@ p, h6 {
     width: 30vw;
     min-width: 200px;
     max-width: 400px;
-    
+
 }
 
 #right-panel {
@@ -112,11 +113,87 @@ p, h6 {
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
     }
 
     h1 {
         font-size: 1.5em;
     }
+
+    #left-panel {
+        height: 100px;
+        width: 100vw;
+        min-width: none;
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #profile {
+        float: left;
+        width: 50%;
+        flex-direction: row;
+        margin-top: 8px;
+    }
+
+    #profile-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icons{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        background-color: #001011;
+    }
+
+    #menu{
+        margin-top: 4px;
+        width: 30px;
+    }
+    .menu-item{
+        float: right;
+    }
+
+    #right-panel{
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0px;
+    }
+
+    #heading{
+        width: 100vw;
+    }
+
+    #skills{
+        width: 90vw;
+    }
+
+    #illustration{
+        transform: translateX(-50%) scale(0.5);
+        width: 600px;
+        position: absolute;
+        left: 50%;
+        bottom: auto;
+        visibility: visible;
+    }
+    h3 {
+        font-size: 0.75em;
+        margin: 2px;
+    }
+    
+    p,
+    h6 {
+        margin: 0;
+    }
+
+    #content{
+        width: 100%;
+    }
+
 }
 
 h4 {
@@ -129,7 +206,7 @@ h5 {
 }
 
 
-#illustration{
+#illustration {
     margin-top: 50px;
     position: absolute;
     bottom: 15%;
@@ -163,7 +240,3 @@ h5 {
 .fnt-inter {
     font-family: 'Inter', sans-serif;
 }
-
-
-
-

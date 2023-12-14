@@ -253,25 +253,33 @@
 
 
     .timeline{
-        width: 100%;
+        width: 400px;
+        margin: auto;
     }
 
     .timeline::after{
-        left: 50%;
+        left: 49.6%;
     }
 
     .container::after{
-        right: 16px;
+        right: 40px;
+        /* background-color: #2ed19b; */
+    }
+
+    .right{
+        left: 52%;
     }
 
     .left::before{
         right: 12px;
         top: 22px;
     }
-
     .right::before{
         left: 10px;
-        /* background-color: #2ed19b; */
+    
+    }
+    .right::after{
+        left: -28px;
     }
     .container{
         padding: 20px;
@@ -281,10 +289,7 @@
     }
 
     .row{
-        /* height: 300px; */
         margin-top: 2px;
-        /* height: 100px; */
-        background-color: #F05941;
     }
 
     .card{

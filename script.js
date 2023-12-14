@@ -1,46 +1,76 @@
 console.log("hey");
+window.typeWriter = function() {
+    var i = 0;
+    var txt = 'Skilled in...';
+    var speed = 250;
+
+    function type() {
+        if (i < txt.length) {
+            $("#home-heading").append(txt.charAt(i));
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+
+    // Call the type function when the document is ready
+    type();
+};
+
 $(document).ready(function () {
     $("#clear").hide();
-    
-        
-        $("#linkedin").mouseover(function() {
-            $("#linkedin img").attr("src", "images/linkedin-transition.png");
-        }).mouseout(function() {
-            $("#linkedin img").attr("src", "images/linkedin.png");
-        });
-    
-        $("#gmail").mouseover(function() {
-            $("#gmail img").attr("src", "images/gmail-transition.png");
-        }).mouseout(function() {
-            $("#gmail img").attr("src", "images/gmail.png");
-        });
-
-        $("#github").mouseover(function() {
-            $("#github img").attr("src", "images/github-transition.png");
-        }).mouseout(function() {
-            $("#github img").attr("src", "images/github.png");
-        });
-
-        $("#telegram").mouseover(function() {
-            $("#telegram img").attr("src", "images/telegram-transition.png");
-        }).mouseout(function() {
-            $("#telegram img").attr("src", "images/telegram.png");
-        });
 
 
+    $("#linkedin").mouseover(function () {
+        $("#linkedin img").attr("src", "images/linkedin-transition.png");
+    }).mouseout(function () {
+        $("#linkedin img").attr("src", "images/linkedin.png");
+    });
 
-        $("#languages").click(function(){
-            $("#analytics, #tools").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
-            })
-            
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
+    $("#gmail").mouseover(function () {
+        $("#gmail img").attr("src", "images/gmail-transition.png");
+    }).mouseout(function () {
+        $("#gmail img").attr("src", "images/gmail.png");
+    });
+
+    $("#github").mouseover(function () {
+        $("#github img").attr("src", "images/github-transition.png");
+    }).mouseout(function () {
+        $("#github img").attr("src", "images/github.png");
+    });
+
+    $("#telegram").mouseover(function () {
+        $("#telegram img").attr("src", "images/telegram-transition.png");
+    }).mouseout(function () {
+        $("#telegram img").attr("src", "images/telegram.png");
+    });
+
+    // var i = 0;
+    // var txt = 'Skilled in...';
+    // var speed = 50;
+
+    // function typeWriter() {
+    //     if (i < txt.length) {
+    //         $("#home-heading").append(txt.charAt(i));
+    //         i++;
+    //         setTimeout(typeWriter, speed);
+    //     }
+    // }
+
+    // Call the typeWriter function when the document is ready
+    window.typeWriter();
+
+    $("#languages").click(function () {
+        $("#analytics, #tools").hide();
+        // $("#clear").show();
+        $('#skills').css({
+            "justify-content": "left"
+        })
+
+        $('#skill-card').animate({ right: "20px" }, 600,
+            function () {
                 $("#clear").show();
             });
-            $('#skill-card').append(`
+        $('#skill-card').append(`
             <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -51,30 +81,30 @@ $(document).ready(function () {
             
             </ul>
             `)
-            
+
+    })
+    $("#clear").click(function () {
+        $("#analytics, #tools").show();
+        $("#clear").show();
+        $('#skills').css({
+            "justify-content": "center"
         })
-        $("#clear").click(function(){
-            $("#analytics, #tools").show();
-            $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "center"
-            })
-            $('#skill-card').animate({right:"-500px"})
-            $('#skill-card').empty();
-        })
+        $('#skill-card').animate({ right: "-500px" })
+        $('#skill-card').empty();
+    })
 
 
-        $("#analytics").click(function(){
-            $("#languages, #tools").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
-            })
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
+    $("#analytics").click(function () {
+        $("#languages, #tools").hide();
+        // $("#clear").show();
+        $('#skills').css({
+            "justify-content": "left"
+        })
+        $('#skill-card').animate({ right: "20px" }, 600,
+            function () {
                 $("#clear").show();
             });
-            $('#skill-card').append(`
+        $('#skill-card').append(`
             <ul>
             <li>Microsoft Excel</li>
             <li>Pandas</li>
@@ -83,29 +113,29 @@ $(document).ready(function () {
             <li>Tableau</li>
             </ul>
             `)
+    })
+    $("#clear").click(function () {
+        $("#languages, #tools").show();
+        $("#clear").hide();
+        $('#skills').css({
+            "justify-content": "center"
         })
-        $("#clear").click(function(){
-            $("#languages, #tools").show();
-            $("#clear").hide();
-            $('#skills').css({
-                "justify-content" : "center"
-            })
-            $('#skill-card').animate({right:"-500px"})
-            $('#skill-card').empty();
-        })
+        $('#skill-card').animate({ right: "-500px" })
+        $('#skill-card').empty();
+    })
 
 
-        $("#tools").click(function(){
-            $("#languages, #analytics").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
-            })
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
+    $("#tools").click(function () {
+        $("#languages, #analytics").hide();
+        // $("#clear").show();
+        $('#skills').css({
+            "justify-content": "left"
+        })
+        $('#skill-card').animate({ right: "20px" }, 600,
+            function () {
                 $("#clear").show();
             });
-            $('#skill-card').append(`
+        $('#skill-card').append(`
             <ul>
             <li>Figma</li>
             <li>VS Code</li>
@@ -114,18 +144,18 @@ $(document).ready(function () {
             <li>jQuery</li>
             </ul>
             `)
-        })
-        
-        $("#clear").click(function(){
-            $("#languages, #analytics").show();
-            $("#clear").hide();
-            $('#skills').css({
-                "justify-content" : "center"
-            })
-            $('#skill-card').animate({right:"-500px"})
-        })
+    })
 
-        
+    $("#clear").click(function () {
+        $("#languages, #analytics").show();
+        $("#clear").hide();
+        $('#skills').css({
+            "justify-content": "center"
+        })
+        $('#skill-card').animate({ right: "-500px" })
+    })
+
+
 
 
     // Changing content on Right Panel
@@ -141,8 +171,9 @@ $(document).ready(function () {
         if (menuItemId === "home") {
             $("#home").addClass("color-orange");
             $("#about, #project, #contact").removeClass("color-orange");
-            $("#heading").append("<h2>Skilled in...</h2>");
-            $("#heading > h2").addClass("fnt-karma color-orange typewriter");
+            $("#heading").append("<h2 id='home-heading'></h2>");
+            $("#heading > h2").addClass("fnt-karma color-orange");
+            window.typeWriter();
             $("#content").append(`
             <div id="skills" class="color-black fnt-mob">
                 <div id="languages" class="skill-item">
@@ -165,23 +196,23 @@ $(document).ready(function () {
                 <img src="images/illus/working.png" alt="">
             </div>
         </div>`);
-        $("#clear").hide();
-        $("#s-html").mouseover(function(){
-            $(".skill").attr("id", "m-html");
-        })
-
-        $("#languages").click(function(){
-            $("#analytics, #tools").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
+            $("#clear").hide();
+            $("#s-html").mouseover(function () {
+                $(".skill").attr("id", "m-html");
             })
-            
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
-                $("#clear").show();
-            });
-            $('#skill-card').append(`
+
+            $("#languages").click(function () {
+                $("#analytics, #tools").hide();
+                // $("#clear").show();
+                $('#skills').css({
+                    "justify-content": "left"
+                })
+
+                $('#skill-card').animate({ right: "20px" }, 600,
+                    function () {
+                        $("#clear").show();
+                    });
+                $('#skill-card').append(`
             <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -192,30 +223,30 @@ $(document).ready(function () {
             
             </ul>
             `)
-            
-        })
-        $("#clear").click(function(){
-            $("#analytics, #tools").show();
-            $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "center"
-            })
-            $('#skill-card').animate({right:"-500px"})
-            $('#skill-card').empty();
-        })
 
-
-        $("#analytics").click(function(){
-            $("#languages, #tools").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
             })
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
+            $("#clear").click(function () {
+                $("#analytics, #tools").show();
                 $("#clear").show();
-            });
-            $('#skill-card').append(`
+                $('#skills').css({
+                    "justify-content": "center"
+                })
+                $('#skill-card').animate({ right: "-500px" })
+                $('#skill-card').empty();
+            })
+
+
+            $("#analytics").click(function () {
+                $("#languages, #tools").hide();
+                // $("#clear").show();
+                $('#skills').css({
+                    "justify-content": "left"
+                })
+                $('#skill-card').animate({ right: "20px" }, 600,
+                    function () {
+                        $("#clear").show();
+                    });
+                $('#skill-card').append(`
             <ul>
             <li>Microsoft Excel</li>
             <li>Pandas</li>
@@ -224,29 +255,29 @@ $(document).ready(function () {
             <li>Tableau</li>
             </ul>
             `)
-        })
-        $("#clear").click(function(){
-            $("#languages, #tools").show();
-            $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "center"
             })
-            $('#skill-card').animate({right:"-500px"})
-            $('#skill-card').empty();
-        })
-
-
-        $("#tools").click(function(){
-            $("#languages, #analytics").hide();
-            // $("#clear").show();
-            $('#skills').css({
-                "justify-content" : "left"
-            })
-            $('#skill-card').animate({right:"20px"}, 600, 
-            function(){
+            $("#clear").click(function () {
+                $("#languages, #tools").show();
                 $("#clear").show();
-            });
-            $('#skill-card').append(`
+                $('#skills').css({
+                    "justify-content": "center"
+                })
+                $('#skill-card').animate({ right: "-500px" })
+                $('#skill-card').empty();
+            })
+
+
+            $("#tools").click(function () {
+                $("#languages, #analytics").hide();
+                // $("#clear").show();
+                $('#skills').css({
+                    "justify-content": "left"
+                })
+                $('#skill-card').animate({ right: "20px" }, 600,
+                    function () {
+                        $("#clear").show();
+                    });
+                $('#skill-card').append(`
             <ul>
             <li>Figma</li>
             <li>VS Code</li>
@@ -255,18 +286,18 @@ $(document).ready(function () {
             <li>jQuery</li>
             </ul>
             `)
-        })
-        
-        $("#clear").click(function(){
-            $("#languages, #analytics").show();
-            $("#clear").hide();
-            $('#skills').css({
-                "justify-content" : "center"
             })
-            $('#skill-card').animate({right:"-500px"})
-        })
 
-            
+            $("#clear").click(function () {
+                $("#languages, #analytics").show();
+                $("#clear").hide();
+                $('#skills').css({
+                    "justify-content": "center"
+                })
+                $('#skill-card').animate({ right: "-500px" })
+            })
+
+
         }
 
 
@@ -277,7 +308,7 @@ $(document).ready(function () {
             $("#home, #project, #contact").removeClass("color-orange");
             $("#heading").append("<h2>About Me</h2>");
             $("#content").append(`
-            
+            <div>
             <div class="timeline">
                 <div class="container left">
                     <div class="content">
@@ -299,6 +330,7 @@ $(document).ready(function () {
                     </div>
                 </div>
             </div>
+            </div>
             <p class="about-me-content fnt-14">
             Hello there! I'm Aakanksha Priya, a dedicated B.Tech student with a passion for transforming ideas into captivating digital experiences. 
             
@@ -316,7 +348,7 @@ $(document).ready(function () {
             `);
             $("#heading > h2").addClass("fnt-karma color-orange")
 
-            
+
         }
 
 
@@ -478,7 +510,7 @@ $(document).ready(function () {
                 "text-decoration": "none",
                 "color": "#092635"
             });
-            
+
             // Applying styles to .overlay
             $(".overlay").css({
                 "position": "absolute",
@@ -537,7 +569,7 @@ $(document).ready(function () {
             });
 
             $('p').css({
-                "margin":"0"
+                "margin": "0"
             })
 
         }
@@ -553,8 +585,8 @@ $(document).ready(function () {
 
     // if ($(window).width() <= 600){
 
-        
-            
+
+
     // }
 });
 
